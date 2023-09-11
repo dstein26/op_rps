@@ -6,6 +6,7 @@ html, body
     display: flex;
     flex-direction: column;
     height: 100%;
+    /*height:auto;*/
     box-sizing: border-box;
 }
 
@@ -27,8 +28,10 @@ footer
 
 .main-content
 {
-    height: calc(100% - 6.2rem);
+    /*height: calc(100% - 6.2rem);*/
+    min-height: calc(100% - 10.2rem);
     padding:3rem 1rem 1rem 1rem;
+    overflow: scroll;
 }
 
 .game-button
@@ -43,6 +46,39 @@ footer
 {
     background-color: rgb(71, 71, 71);
     border-color: rgb(97, 97, 97);
+}
+
+.results
+{
+    width:80%;
+}
+
+.result-box
+{
+    height: 11rem;
+    aspect-ratio: 1/1;
+    margin:0.5rem;
+    border-radius: 0.5rem;
+}
+
+.scoreBar
+{
+    display: flex;
+    background-color: red;
+    border:2px white solid;
+    border-radius: 2rem;
+    height: 2rem;
+    width: 50%;
+    margin:0;
+    padding:0;
+}
+
+.scoreBar .scoreBar
+{
+    background-color: blue;
+    border:none;
+    height: 100%;
+    width: 20%;
 }
 
 .flex-row
@@ -77,8 +113,8 @@ footer
 
 .theme-main
 {
-    background-color: black;
-    color:aquamarine;
+    background-color:cadetblue;
+    color:black;
     border-color:rgb(71, 71, 71);
 }
 
@@ -87,6 +123,16 @@ footer
     background-color: inherit;
     color: inherit;
     border-color: inherit;
+}
+
+.theme-pc
+{
+    border-color: blue;
+}
+
+.theme-com
+{
+    border-color: red;
 }
 
 .border-thin

@@ -14,9 +14,14 @@
             <h1 class="flex-column flex-centered">Rock Paper Scissors</h1>
         </header>    
         <script src="rps.js" async defer></script>
+        <!-- 
+            Main Content Div.
+            Contains all the elements of the rock-paper-scissors game
+        -->
         <div class="main-content flex-column theme-main">
             <p>Play rock-paper-scissors vs a computer opponent.</p>
-            <div class="flex-column flex-centered theme-inherit">
+            <div class="flex-column flex-centered align-centered theme-inherit">
+                <!-- Button Div. Contians the 3 buttons the user uses to make a selection -->
                 <div class="flex-row flex-centered theme-inherit">
                     <div id="ROCK" class="game-button border-thick flex-column flex-centered align-centered theme-inherit">
                         <img src="assets/coal.png" alt="ROCK" width=150 height=150>
@@ -30,11 +35,34 @@
                         <img src="assets/scissors.png" alt="SCISSORS" width=150 height=150 style="filter:invert(1)">
                         SCISSORS
                     </div>
-                </div>
-                <div class="flex-row flex-centered theme-inherit">
-                    <progress id="SCORE" value=35 max=100></progress>
-                </div>
+                </div> <!-- End Button Div -->
+                <!-- Results Div. Contains elements to give feedback and score to the user -->
+                <div class="results flex-column flex-centered align-centered theme-inherit">
+                    <!-- Div to contain icon holders to show the user what they selected vs what the computer selected -->
+                    <div class="flex-row flex-centered theme-inherit">
+                        <div class="result-box border-thick flex-column flex-centered align-centered theme-inherit theme-pc">
+                            <img id="PCSelection" src="" width=150 height=150>
+                            YOU
+                        </div>
+                        <div class="result-box border-thick flex-column flex-centered align-centered theme-inherit theme-com">
+                            <img id="COMSelection" src="" width=150 height=150>
+                            COM
+                        </div>
+                    </div>
+                    <h1 id="textResults"></h1>
+                    <!-- 
+                        Old Progress bar. Will try different/more consistent implementation
+                    <div class="flex-row flex-centered theme-inherit">
+                        <progress id="SCORE" value=35 max=100></progress>
+                    </div> 
+                    -->
+                    <div class="scoreBar">
+                        <div id="ScoreBar" class="scoreBar"></div>
+                    </div>
+                    <h1 id="SCORE"></h1>
+                </div> <!-- End results div -->
             </div>
+            <!-- Resources div. Credits where the icons were obtained -->
             <div>
                 <h3>Resources</h3>
                 <ul>
@@ -42,8 +70,8 @@
                     <li><a href="https://www.flaticon.com/free-icons/scroll" title="scroll icons">Scroll icons created by Freepik - Flaticon</a></li>
                     <li><a href="https://www.flaticon.com/free-icons/scissor" title="scissor icons">Scissor icons created by Freepik - Flaticon</a></li>
                 </ul>
-            </div>
-        </div>
+            </div> <!-- End Resources div -->
+        </div> <!-- End main content -->
 
         
         <footer class="theme-header border-thin">
