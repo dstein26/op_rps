@@ -32,7 +32,7 @@
                         PAPER
                     </div>
                     <div id="SCISSORS" class="game-button border-thick flex-column flex-centered align-centered theme-inherit">
-                        <img src="assets/scissors.png" alt="SCISSORS" width=150 height=150 style="filter:invert(1)">
+                        <img src="assets/scissors_inverted.png" alt="SCISSORS" width=150 height=150> <!-- style="filter:invert(1)"-->
                         SCISSORS
                     </div>
                 </div> <!-- End Button Div -->
@@ -40,12 +40,12 @@
                 <div class="results flex-column flex-centered align-centered theme-inherit">
                     <!-- Div to contain icon holders to show the user what they selected vs what the computer selected -->
                     <div class="flex-row flex-centered theme-inherit">
-                        <div class="result-box border-thick flex-column flex-centered align-centered theme-inherit theme-pc">
-                            <img id="PCSelection" src="" width=150 height=150>
+                        <div id="PCSelection" class="result-box border-thick flex-column flex-centered align-centered theme-inherit theme-pc">
+                            <img src="" width=150 height=150>
                             YOU
                         </div>
-                        <div class="result-box border-thick flex-column flex-centered align-centered theme-inherit theme-com">
-                            <img id="COMSelection" src="" width=150 height=150>
+                        <div id="COMSelection" class="result-box border-thick flex-column flex-centered align-centered theme-inherit theme-com">
+                            <img src="" width=150 height=150>
                             COM
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                     <div class="scoreBar">
                         <div id="ScoreBar" class="scoreBar"></div>
                     </div>
-                    <!--
+                    <!-- Idea to add statistics on how often each option is chosen
                     <div class="border-thin results flex-column flex-centered align-centered">
                         <h1>Player Selections</h1>
                         <div class="scoreBar">

@@ -10,6 +10,10 @@ const textResult = document.getElementById("textResults");
 const textScore = document.getElementById("SCORE");
 const scoreBar = document.getElementById("ScoreBar");
 
+const iconRock = "assets/coal.png"
+const iconPaper = "assets/ancient-scroll.png"
+const iconScissors = "assets/scissors_inverted.png"
+
 rock.addEventListener("click", selectRock);
 paper.addEventListener("click", selectPaper);
 scissors.addEventListener("click", selectScissors);
@@ -63,8 +67,28 @@ function runGame()
         default : 
             console.log("[Result] You should not reach this point... " + result);
     }
-
+    setWinEffects(result);
     updateScore();
+}
+
+function setWinEffects(result)
+{
+    pcSelect.style.backgroundColor = "inherit";
+    pcSelect.style.boxShadow = "none";
+    comSelect.style.backgroundColor = "inherit";
+    comSelect.style.boxShadow = "none";
+
+    switch(result)
+    {
+        case GameResults.PCWin :
+            pcSelect.style.backgroundColor = "gold";
+            pcSelect.style.boxShadow = "0px 0px 20px gold"
+            break;
+        case GameResults.ComWin : 
+            comSelect.style.backgroundColor = "gold";
+            comSelect.style.boxShadow = "0px 0px 20px gold"
+            break;
+    }
 }
 
 function setImage(img, selection)
@@ -72,13 +96,13 @@ function setImage(img, selection)
     switch (selection)
     {
         case RPS.Rock : 
-            img.src = "assets/coal.png";
+            img.children[0].src = iconRock;
             break;
         case RPS.Paper :
-            img.src = "assets/ancient-scroll.png";
+            img.children[0].src = iconPaper;
             break;
         case RPS.Scissors :
-            img.src = "assets/scissors.png";
+            img.children[0].src = iconScissors;
             break;
     }
 }
